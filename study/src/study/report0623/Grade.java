@@ -17,4 +17,9 @@ public class Grade {
 		System.out.println("수학: " + mat);
 		System.out.println("합: " + (kor+eng+mat));
 	}
+	
+	public static void main(String[] args) {
+		Grade g = new Grade(52,88,96);
+		g.print();
+	}
 }
