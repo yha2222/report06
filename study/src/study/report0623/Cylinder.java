@@ -9,12 +9,13 @@ public class Cylinder extends Circle {
 	Circle circle;
 	
 	Cylinder(){
-		circle = new Circle();
+		Circle circle = new Circle();
 	}
 	
-	//Cylinder(Circle circle, double height){
-	//	this.height = height;
-	//}
+	Cylinder(Circle circle, double height){
+		super();
+		this.height = height;
+	}
 	
 	Cylinder(double radius, double PI, double height){
 		super(radius, PI);
@@ -27,8 +28,8 @@ public class Cylinder extends Circle {
 		cd1.height = 5.6;
 		cd1.print();
 		
-		//Cylinder cd2 = new Cylinder(new Circle(2.8), 5.6);
-		//cd2.print();
+		Cylinder cd2 = new Cylinder(new Circle(2.8), 5.6);
+		cd2.print();
 	}
 	
 	//원기둥의 부피 
@@ -37,7 +38,7 @@ public class Cylinder extends Circle {
 	}
 	
 	public void print() {
-		System.out.println("원: " + circle.getArea());
+		System.out.println("원: " + super.getArea());
 		System.out.println("원통의 부피: " + getVolume());
 	}
 	

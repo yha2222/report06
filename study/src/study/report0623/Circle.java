@@ -6,7 +6,10 @@ public class Circle {
 	public double radius;
 	public static double PI= 3.141592;
 	
-	Circle(){}
+	Circle(){
+		//수정
+		this(2.8);
+	}
 	
 	Circle(double radius, double PI){
 		this.radius = radius;
