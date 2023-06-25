@@ -33,7 +33,11 @@ public class Employee {
 	
 //3. 급여는 연봉에서 12개월을 나눈 값으로 지급하나 매달 세금으로 급여의 8%를 빼고 수령받게 될 것이다.
 //		따라서 급여 정보를 반환하는 메서드는 위의 사항을 고려하여 값이 반환될 수 있게 해야 한다.	
-	public double calcSal() {
+	public double calcPay() {
 		return pay - (pay * 0.08);
 	}
+	
+	/*
+	 * public double calcSal() { if(sal*0.025) }
+	 */
 }

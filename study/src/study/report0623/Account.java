@@ -37,20 +37,30 @@ public class Account {
 	//문제 10 - 위에서 구현된 클래스 Account에서 다음 기능을 추가하여 작성하시오
 	//인자인 금액을 저축하는 메소드
 	public long deposit(long amount) {
-		return amount;
+		this.amount += amount;
+		return this.amount;
 	}
 	
 	//인자인 금액을 인출하는 메소드
 	public long withdraw(long amount) {
-		return amount;
+		if(amount > this.amount) {
+			System.out.println("인출 불가");
+		}else {
+			this.amount -= amount;
+		}
+		return this.amount;
 	}
 	
-	//문제 11 - 위에서 구현된 메소드 withdraw()를 다음 조건에 맞게 다시 작성하시오.
-	//· 인출 상한 금액은 잔액까지로 하며, 이 경우 이러한 상황을 출력
-	//· 클래스 AccountTest의 main() 메소드에서 인출 상한 이상의 금액을 인출하려는 메소드를 호출하여 출력
+	public void print() {
+		System.out.println("현재 잔액: " + amount);
+	}
 	
 	//Account 클래스의 main() 메소드에서 Account 객체를 생성하여 적당한 저축과 인출을 수행한 후 잔금을 출력
 	public static void main(String[] args) {
-		
+		Account acc = new Account();
+		acc.deposit(500000);
+		acc.deposit(50000);
+		acc.withdraw(50000);
+		acc.print();
 	}
 }

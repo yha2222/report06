@@ -7,14 +7,12 @@ public class Circle {
 	public static double PI= 3.141592;
 	
 	Circle(){
-		//수정
-		this(2.8);
+		this(0.0);
 	}
 	
-	Circle(double radius, double PI){
-		this.radius = radius;
-		this.PI = PI;
-	}
+	/*
+	 * Circle(double radius, double PI){ this.radius = radius; this.PI = PI; }
+	 */
 		 
 	//생성자 구현
 	public Circle(double radius) {
@@ -25,6 +23,4 @@ public class Circle {
 	public double getArea() {
 		return radius * radius *PI;
 	}
-	
-	
 }

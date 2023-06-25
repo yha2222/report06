@@ -5,6 +5,7 @@ package study.report0623;
 //다음과 같은 객체 생성이 가능하도록 생성자를 구현 . Cylinder cd = new Cylinder(new Circle(2.8), 5.6);
 
 public class Cylinder extends Circle {
+	
 	double height;
 	Circle circle;
 	
@@ -13,14 +14,14 @@ public class Cylinder extends Circle {
 	}
 	
 	Cylinder(Circle circle, double height){
-		super();
+		this.circle = circle;
 		this.height = height;
 	}
 	
-	Cylinder(double radius, double PI, double height){
-		super(radius, PI);
-		this.height = height;
-	}
+	/*
+	 * Cylinder(double radius, double PI, double height){ super(radius, PI);
+	 * this.height = height; }
+	 */
 	
 	public static void main(String[] args) {
 		Cylinder cd1 = new Cylinder();
