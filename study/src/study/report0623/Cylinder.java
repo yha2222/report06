@@ -7,21 +7,22 @@ package study.report0623;
 public class Cylinder extends Circle {
 	
 	double height;
-	Circle circle;
 	
 	Cylinder(){
-		Circle circle = new Circle();
+		super();
 	}
 	
 	Cylinder(Circle circle, double height){
-		this.circle = circle;
+		super(circle.radius, circle.PI);
 		this.height = height;
 	}
 	
-	/*
-	 * Cylinder(double radius, double PI, double height){ super(radius, PI);
-	 * this.height = height; }
-	 */
+	
+	 Cylinder(double radius, double PI, double height){
+		 super(radius, PI);
+		 this.height = height;
+	}
+	 
 	
 	public static void main(String[] args) {
 		Cylinder cd1 = new Cylinder();
@@ -39,7 +40,7 @@ public class Cylinder extends Circle {
 	}
 	
 	public void print() {
-		System.out.println("원: " + super.getArea());
+		System.out.println("원: " + getArea());
 		System.out.println("원통의 부피: " + getVolume());
 	}
 	
